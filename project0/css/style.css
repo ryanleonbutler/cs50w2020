@@ -1,0 +1,51 @@
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  width: 120px;
+  background-color: #222;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+.nav-bar li {
+  color: #999;
+}
+
+.nav-bar a {
+  color: #999;
+}
+
+.nav-bar a:active {
+  background-color: #007bff;
+  color: #999;
+}
+
+.table-responsive table {
+  margin: auto;
+  width: 50% !important;
+  border: 1px solid #222;
+  border-collapse: collapse;
+}
+
+.table-responsive th, td {
+  border: 1px solid #777;
+  padding: 5px;
+  text-align: center;
+}
+
+.table-responsive th {
+  background-color: lightgrey;
+}
+
+.table-responsive img {
+  border-radius: 8px;
+  width: 10%;
+}
+
+.table-responsive td img {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

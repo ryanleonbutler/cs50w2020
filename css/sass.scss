@@ -1,0 +1,17 @@
+$color: red;
+$color2: blue;
+$color3: green;
+$color4: yellow;
+
+h1 {
+  color: $color;
+  font-weight: bold;
+}
+
+ol {
+  color: $color2;
+}
+
+li {
+  color: $color2;
+}
