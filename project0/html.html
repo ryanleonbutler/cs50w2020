@@ -8,31 +8,62 @@
     <!-- Sass stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #212529;">
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="git.html">Git</a></li>
-            <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
-            <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
-            <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
-            <li class="nav-item"><a class="nav-link" href="python.html">Python</a></li>
-        </ul>
-        <span class="navbar-text">
-            Dev Notes
-        </span>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark"  style="background-color: #212529;">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="git.html">Git</a></li>
+                <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                <li class="nav-item"><a class="nav-link" href="python.html">Python</a></li>
+            </ul>
+            <span class="navbar-text">
+                Dev Notes
+            </span>
+        </div>
     </div>
 </nav>
+
 <body>
     <div class="container">
         <div class="jumbotron">
             <h1>HTML Notes</h1>
         </div>
 
-        <div>
-            <p></p>
+        <div class="card text-justify font-weight-normal text-left">
+        <div class="card-body">
+            <h5 class="card-title">Overview</h5>
+            <b>HTML</b> ...
         </div>
+    </div>
 
+    <div class="card text-justify font-weight-normal text-left">
+        <div class="card-body">
+            <h5 class="card-title">Language Reference</h5>
+            <code>&lt;html&gt;&lt;/html&gt;</code> --- Main tag added at the start of the HTML page.
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <code>
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang=&quot;en&quot;&gt;
+                                &lt;head&gt;
+                                    &lt;title&gt;My Page!&lt;/title&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                    &lt;h1&gt;My Page!&lt;/h1&gt;
+                                    &lt;p&gt;
+                                        This is my Test Page!
+                                    &lt;/p&gt;
+                                &lt;/body&gt;
+                            &lt;/html&gt;
+                        </code>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
