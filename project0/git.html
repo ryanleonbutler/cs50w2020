@@ -8,18 +8,230 @@
     <!-- Sass stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<nav class="nav-bar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="git.html">Git</a></li>
-        <li><a href="html.html">HTML</a></li>
-        <li><a href="css.html">CSS</a></li>
-        <li><a href="javascript.html">JavaScript</a></li>
-        <li><a href="python.html">Python</a></li>
-    </ul>
+
+<nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #212529;">
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="git.html">Git</a></li>
+            <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" href="python.html">Python</a></li>
+        </ul>
+        <span class="navbar-text">
+            Dev Notes
+        </span>
+    </div>
 </nav>
+
 <body>
-    <h1 class="text-center">Git Notes</h1>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Git Notes</h1>
+        </div>
+    </div>
+
+    <div class="card text-justify font-weight-normal text-left">
+        <div class="card-body">
+            <h5 class="card-title">Overview</h5>
+            <b>Git</b> is a source code, version control system, which keeps track of changes made to source code. It also allows for source code to be synchronized between various contributors, make changes to source code without losing the original copy, and revert back to older versions of the source code.
+            <br><br>
+            <b>GitHub</b> is a website that stores Git repositories on the Internet in order to facilitate the collaboration that Git allows for. A repository is a place to keep track of source code and all the changes to that source code.
+        </div>
+    </div>
+
+    <div class="card text-justify font-weight-normal text-left">
+        <div class="card-body">
+            <h5 class="card-title">Commands</h5>
+            <code>git clone &lt;url&gt;</code> --- connects to a repository stored on a server, for example GitHub, and downloads it locally.
+            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git clone git@github.com:&lt;user-name&gt;/my-repo;.git<br>
+                            Cloning into 'my-repo'...<br>
+                            remote: Enumerating objects: 96, done.<br>
+                            remote: Counting objects: 100% (96/96), done.<br>
+                            remote: Compressing objects: 100% (67/67), done.<br>
+                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
+                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
+                            Resolving deltas: 100% (33/33), done.
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git add &lt;filename(s)&gt;</code> --- adds files to the staging area to be included in the next commit.
+            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git add -v test.html<br>
+                            add 'test.html'
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git add -A</code> --- adds all files to the staging area to be tracked, without specifying their names.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git add -Av<br>
+                            add 'my-test.html'<br>
+                            add 'my-test.txt'
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git commit -m &quot;message&quot;</code> --- takes a "snapshot" of the repository and saves it with a message about the changes.
+            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            git commit -m "Test commit."<br>
+                            [master a5e3ab8] Test commit.<br>
+                            2 files changed, 0 insertions(+), 0 deletions(-)<br>
+                            create mode 100644 test.html<br>
+                            create mode 100644 test.txt
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git status</code> --- prints what is currently going on with the repository, provides and overview.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git status<br>
+                            On branch master<br>
+                            Your branch is ahead of 'origin/master' by 2 commits.<br>
+                            &nbsp;(use "git push" to publish your local commits)<br>
+                            <br>
+                            Changes to be committed:<br>
+                            &nbsp;(use "git reset HEAD &lt;file&gt;..." to unstage)<br>
+                            <br>
+	                        new file:   my-test.html<br>
+	                        new file:   my-test.txt<br>
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git push</code> --- push any local changes (commits) to a remote server, for example Github.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
+                            Cloning into '&lt;repo&gt;'...<br>
+                            remote: Enumerating objects: 96, done.<br>
+                            remote: Counting objects: 100% (96/96), done.<br>
+                            remote: Compressing objects: 100% (67/67), done.<br>
+                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
+                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
+                            Resolving deltas: 100% (33/33), done.<br>
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git pull</code> --- pull any remote changes from a remote server, for example GitHub, to the local computer.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
+                            Cloning into '&lt;repo&gt;'...<br>
+                            remote: Enumerating objects: 96, done.<br>
+                            remote: Counting objects: 100% (96/96), done.<br>
+                            remote: Compressing objects: 100% (67/67), done.<br>
+                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
+                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
+                            Resolving deltas: 100% (33/33), done.<br>
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git log</code> --- print a history of all the commits that have been made in the current repository.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
+                            Cloning into '&lt;repo&gt;'...<br>
+                            remote: Enumerating objects: 96, done.<br>
+                            remote: Counting objects: 100% (96/96), done.<br>
+                            remote: Compressing objects: 100% (67/67), done.<br>
+                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
+                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
+                            Resolving deltas: 100% (33/33), done.<br>
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git reflog</code> --- print a list of all the different references to commits.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
+                            Cloning into '&lt;repo&gt;'...<br>
+                            remote: Enumerating objects: 96, done.<br>
+                            remote: Counting objects: 100% (96/96), done.<br>
+                            remote: Compressing objects: 100% (67/67), done.<br>
+                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
+                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
+                            Resolving deltas: 100% (33/33), done.<br>
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git reset --hard &lt;commit&gt;</code> --- resets the repository to a given commit.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
+                            Cloning into '&lt;repo&gt;'...<br>
+                            remote: Enumerating objects: 96, done.<br>
+                            remote: Counting objects: 100% (96/96), done.<br>
+                            remote: Compressing objects: 100% (67/67), done.<br>
+                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
+                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
+                            Resolving deltas: 100% (33/33), done.<br>
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+            <code>git reset --hard origin/master</code> --- resets the repository to its original state, for example the version cloned from GitHub.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <samp>
+                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
+                            Cloning into '&lt;repo&gt;'...<br>
+                            remote: Enumerating objects: 96, done.<br>
+                            remote: Counting objects: 100% (96/96), done.<br>
+                            remote: Compressing objects: 100% (67/67), done.<br>
+                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
+                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
+                            Resolving deltas: 100% (33/33), done.<br>
+                        </samp>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

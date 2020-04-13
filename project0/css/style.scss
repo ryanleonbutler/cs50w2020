@@ -5,59 +5,34 @@ $soft-grey: #999;
 $default-blue: #007bff;
 
 @media (min-device-width: 700px) {
-  
+  .navbar-nav mr-auto ul {
+    font-size: 20px;
+  }
 }
 
 @media (max-device-width: 699px) {
-
+  .navbar-nav mr-auto ul{
+    font-size: 10px;
+  }
 }
 
-.nav-bar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 10px;
-  width: 120px;
-  background-color: $dark-grey;
-  height: 100%;
-  position: fixed;
-  overflow: auto;
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%
+  }
 }
 
-.nav-bar li {
-  color: $soft-grey;
+@media (min-width: 576px) {
+  .container {
+    max-width: 100%
+  }
 }
 
-.nav-bar a {
-  color: $soft-grey;
-}
-
-.nav-bar a:active {
-  background-color: $default-blue;
-  color: #999;
-}
-
-.table-responsive table {
-  margin: auto;
-  width: 50% !important;
-  border: 1px solid $dark-grey;
-  border-collapse: collapse;
-}
-
-.table-responsive th, td {
-  border: 1px solid $light-grey;
-  padding: 5px;
-  text-align: center;
-}
-
-.table-responsive th {
-  background-color: lightgrey;
-}
-
-.table-responsive img {
+.table img {
   border-radius: 8px;
-  width: 10%;
+  width: 33px;
 }
 
-.table-responsive td img {
+.table td img {
   display: block;
 }
