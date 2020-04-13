@@ -10,18 +10,22 @@
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #212529;">
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="git.html">Git</a></li>
-            <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
-            <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
-            <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
-            <li class="nav-item"><a class="nav-link" href="python.html">Python</a></li>
-        </ul>
-        <span class="navbar-text">
-            Dev Notes
-        </span>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="git.html">Git</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="python.html">Python</a></li>
+                </ul>
+                <span class="navbar-text">
+                    Dev Notes
+                </span>
+            </div>
+        </div>
     </div>
 </nav>
 
@@ -45,7 +49,7 @@
         <div class="card-body">
             <h5 class="card-title">Commands</h5>
             <code>git clone &lt;url&gt;</code> --- connects to a repository stored on a server, for example GitHub, and downloads it locally.
-            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
@@ -63,7 +67,7 @@
             </div>
 
             <code>git add &lt;filename(s)&gt;</code> --- adds files to the staging area to be included in the next commit.
-            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
@@ -75,7 +79,7 @@
             </div>
 
             <code>git add -A</code> --- adds all files to the staging area to be tracked, without specifying their names.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
@@ -88,7 +92,7 @@
             </div>
 
             <code>git commit -m &quot;message&quot;</code> --- takes a "snapshot" of the repository and saves it with a message about the changes.
-            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
@@ -103,7 +107,7 @@
             </div>
 
             <code>git status</code> --- prints what is currently going on with the repository, provides and overview.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 70%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
@@ -116,115 +120,98 @@
                             &nbsp;(use "git reset HEAD &lt;file&gt;..." to unstage)<br>
                             <br>
 	                        new file:   my-test.html<br>
-	                        new file:   my-test.txt<br>
+	                        new file:   my-test.txt
                         </samp>
                     </p>
                 </div>
             </div>
 
             <code>git push</code> --- push any local changes (commits) to a remote server, for example Github.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
-                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
-                            Cloning into '&lt;repo&gt;'...<br>
-                            remote: Enumerating objects: 96, done.<br>
-                            remote: Counting objects: 100% (96/96), done.<br>
-                            remote: Compressing objects: 100% (67/67), done.<br>
-                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
-                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
-                            Resolving deltas: 100% (33/33), done.<br>
+                            $ git push<br>
+                            Enumerating objects: 25, done.<br>
+                            Counting objects: 100% (25/25), done.<br>
+                            Delta compression using up to 8 threads<br>
+                            Compressing objects: 100% (13/13), done.<br>
+                            Writing objects: 100% (13/13), 4.25 KiB | 2.13 MiB/s, done.<br>
+                            Total 13 (delta 7), reused 0 (delta 0)<br>
+                            remote: Resolving deltas: 100% (7/7), completed with 2 local objects.<br>
+                            To github.com:user-name/my-repo.git<br>
+                            &nbsp;1103ce4..2e5ce68  master -> master
                         </samp>
                     </p>
                 </div>
             </div>
 
             <code>git pull</code> --- pull any remote changes from a remote server, for example GitHub, to the local computer.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
-                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
-                            Cloning into '&lt;repo&gt;'...<br>
-                            remote: Enumerating objects: 96, done.<br>
-                            remote: Counting objects: 100% (96/96), done.<br>
-                            remote: Compressing objects: 100% (67/67), done.<br>
-                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
-                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
-                            Resolving deltas: 100% (33/33), done.<br>
+                            $ git pull<br>
+                            remote: Enumerating objects: 25, done.<br>
+                            remote: Counting objects: 100% (25/25), done.<br>
+                            remote: Compressing objects: 100% (6/6), done.<br>
+                            remote: Total 13 (delta 7), reused 13 (delta 7), pack-reused 0<br>
+                            Unpacking objects: 100% (13/13), done.<br>
+                            From github.com:user-name/my-repo<br>
+                            &nbsp;1103ce4..2e5ce68  master &nbsp;-> origin/master<br>
+                            error: Your local changes to the following files would be overwritten by merge:<br>
+                            &nbsp;my-test.html my-test.txt
                         </samp>
                     </p>
                 </div>
             </div>
 
             <code>git log</code> --- print a history of all the commits that have been made in the current repository.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
-                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
-                            Cloning into '&lt;repo&gt;'...<br>
-                            remote: Enumerating objects: 96, done.<br>
-                            remote: Counting objects: 100% (96/96), done.<br>
-                            remote: Compressing objects: 100% (67/67), done.<br>
-                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
-                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
-                            Resolving deltas: 100% (33/33), done.<br>
+                            $ git log <br>
+                            49e4b39 Track files and commit in one. (Ryan, 67 minutes ago) <br>
+                            a5e3ab8 Test commit. (Ryan, 70 minutes ago)
                         </samp>
                     </p>
                 </div>
             </div>
 
             <code>git reflog</code> --- print a list of all the different references to commits.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
-                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
-                            Cloning into '&lt;repo&gt;'...<br>
-                            remote: Enumerating objects: 96, done.<br>
-                            remote: Counting objects: 100% (96/96), done.<br>
-                            remote: Compressing objects: 100% (67/67), done.<br>
-                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
-                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
-                            Resolving deltas: 100% (33/33), done.<br>
+                            $ git reflog <br>
+                            49e4b39 (HEAD -> master) HEAD@{0}: commit: Track files and commit in one. <br>
+                            a5e3ab8 HEAD@{1}: commit: Test commit. <br>
+                            1103ce4 HEAD@{2}: clone: from git@github.com:my-user/my-repo.git
                         </samp>
                     </p>
                 </div>
             </div>
 
             <code>git reset --hard &lt;commit&gt;</code> --- resets the repository to a given commit.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
-                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
-                            Cloning into '&lt;repo&gt;'...<br>
-                            remote: Enumerating objects: 96, done.<br>
-                            remote: Counting objects: 100% (96/96), done.<br>
-                            remote: Compressing objects: 100% (67/67), done.<br>
-                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
-                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
-                            Resolving deltas: 100% (33/33), done.<br>
+                            $ git reset --hard a5e3ab8 <br>
+                            HEAD is now at a5e3ab8 Test commit.
                         </samp>
                     </p>
                 </div>
             </div>
 
-            <code>git reset --hard origin/master</code> --- resets the repository to its original state, for example the version cloned from GitHub.<br>
-            <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+            <code>git reset --hard origin/master</code> --- resets the repository to its original state, the version cloned from GitHub.<br>
+            <div class="card text-white bg-dark mb-3" style="max-width: 60%;">
                 <div class="card-body">
                     <p class="card-text">
                         <samp>
-                            $ git clone git@github.com:&lt;user-name&gt;/&lt;repo&gt;.git<br>
-                            Cloning into '&lt;repo&gt;'...<br>
-                            remote: Enumerating objects: 96, done.<br>
-                            remote: Counting objects: 100% (96/96), done.<br>
-                            remote: Compressing objects: 100% (67/67), done.<br>
-                            remote: Total 96 (delta 33), reused 87 (delta 24), pack-reused 0<br>
-                            Receiving objects: 100% (96/96), 639.05 KiB | 625.00 KiB/s, done.<br>
-                            Resolving deltas: 100% (33/33), done.<br>
+                            $ git reset --hard origin/master <br>
+                            HEAD is now at 2e5ce68 Updated my-repo
                         </samp>
                     </p>
                 </div>
